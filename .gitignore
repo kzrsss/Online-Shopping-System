@@ -1,0 +1,8 @@
+**/target/
+**/out/
+.idea
+*.iml
+*.jar
+*.class
+*Test.java
+**/test/

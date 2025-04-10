@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零食商城</title>
+    <link id="css" rel="stylesheet" type="text/css" href="index.css" />
+    <script charset="utf-8" type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div style="width: 100%;height: 100%;">
+        <div style="float: left;width: 100%;height: 100px;background-color: ivory;">
+            <img src="image/公告.jpg" alt="" style="width: 100%;height: 100px;">
+        </div>
+        <div style="float: left;width: 20%;height: 1000px;background-color: aqua;">
+            <!--左边栏空白占位  -->
+        </div>
+        <div style="float: left;width: 60%;height: 1000px;">
+            <div style="float: left;width: 2%;height: 1000px;">
+            </div>
+            <!-- 零食卡片 -->
+            <div style="float: left;width: 98%;height: 1000px;">
+                <!-- 零食卡片内容 -->
+            </div>
+        </div>
+        <div style="float: left;width: 20%;height: 1000px;background-color: hotpink;text-align:center;">
+            <!--右边栏  -->
+            <center>
+                <div style="margin-top:150px;">
+                    <form action="LoginPost" method="post" onSubmit="return denglu(this)" id="loginForm" name="loginForm">
+                        <input type="text" name="name" placeholder="请输入用户名"><br>
+                        <br>
+                        <input type="password" name="pwd" placeholder="请输入密码"><br>
+                        <br>
+                        <button type="submit">登&emsp;陆</button>
+                        <br>
+                    </form>
+                    <button onclick="displayWindow()">注&emsp;册</button>
+                </div>
+            </center>
+        </div>
+    </div>
+    <!--  注册弹窗-->
+    <!--悬浮窗口-->
+    <div id="window" class="window_css" style="text-align:center;">
+        <form action="Registered" onSubmit="return zhuce(this)" enctype="multipart/form-data" method="post">
+            账&emsp;&emsp;号：<input type="text" name="re_name"><br><br>
+            密&emsp;&emsp;码：<input type="password" name="re_pwd"><br><br>
+            确认密码：<input type="password" name="re_rpwd"><br><br>
+            电话号码：<input type="text" name="re_tel"><br><br>
+            所在省份：<input type="text" name="re_address"><br><br>
+            详细地址：<input type="text" name="re_address_all"><br><br>
+            快递收件人：<input type="text" name="re_address_who"><br><br>
+            头像上传：<input type="file" name="file1" id="file1"><br><br>
+            <button type="submit">提交注册</button>
+        </form>
+        <button onclick="hideWindow()">取&emsp;消</button>
+    </div>
+    <!--出现悬浮窗口后,背景变暗-->
+    <div id="shadow" class="shadow_css"></div>
+</body>
+</html>
